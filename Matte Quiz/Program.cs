@@ -21,12 +21,19 @@ namespace Matte_Quiz
 
         static void Main(string[] args)
         {
-            Random randomgen = new Random();
+            Random randomGenerator = new Random();
 
-      
+            int nummer1 = randomGenerator.Next(11);
+            int nummer2 = randomGenerator.Next(11);
+            int svar;
+            int antalFrågor;
+            int antalFrågorKvar;
+            int antalRätt = 0;
 
             Console.Write("Hur många matematiska problem vill du lösa? ");
-            RequestInput();
+            antalFrågorKvar = RequestInput();
+
+            Console.WriteLine(antalFrågorKvar);
 
         }
     }
