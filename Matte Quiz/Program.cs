@@ -15,7 +15,6 @@ namespace Matte_Quiz
             {
                 Console.WriteLine("*ERROR* Kan ej läsa, använd siffror.");
             }
-
             return playerAnswer;
         }
 
@@ -35,10 +34,8 @@ namespace Matte_Quiz
             numQuestions = Convert.ToInt32(RequestInput());
             numQuestionsLeft = numQuestions;
 
-
             while (numQuestionsLeft > 0)                     //Loopen som hanterar frågedelen av spelet. Svarar du rätt ökar det poängen.
             {
-
                 Console.Write("Vad är " + number1 + " * " + number2 + "? ");
                 answer = number1 * number2;
                 playerAnswer = RequestInput();
@@ -51,12 +48,12 @@ namespace Matte_Quiz
                 {
                     Console.WriteLine(playerAnswer + " Är fel, försök igen..");
                 }
-                Console.ReadKey();
                 numQuestionsLeft--;
                 number1 = randomGenerator.Next(11);
                 number2 = randomGenerator.Next(11);
             }
-
+                                                           // Redovisar antalet rätt svar. 
+            Console.WriteLine("Du fick " + correctAnswer + " av " + numQuestions + " frågor korrekt! ");
         }
     }
 }
